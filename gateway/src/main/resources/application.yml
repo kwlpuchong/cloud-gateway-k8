@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: alpha
+        uri: http://alpha
+        predicates:
+        - Path=/alpha/**
