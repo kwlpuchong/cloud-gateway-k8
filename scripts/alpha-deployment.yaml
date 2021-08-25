@@ -12,16 +12,16 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: alpha-app
+  name: alpha-deploy
 spec:
   selector:
       matchLabels:
-        app: alpha-service
+        app: alpha-deploy
   replicas: 2
   template:
     metadata:
       labels:
-        app: alpha-app
+        app: alpha-deploy
     spec:
       containers:
         - name: alpha-container
