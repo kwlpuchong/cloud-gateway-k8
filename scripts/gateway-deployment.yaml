@@ -1,0 +1,33 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: gateway-service
+spec:
+  type: NodePort
+  selector:
+    app: gateway-service
+  ports:
+  - protocol: TCP
+    targetPort: 8080
+    port: 8080
+    nodePort: 30080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-app
+spec:
+  selector:
+      matchLabels:
+        app: gateway-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gateway-app
+    spec:
+      containers:
+        - name: gateway-conatiner
+          image: localhost:5000/gateway:latest
+          ports:
+          - containerPort: 8080

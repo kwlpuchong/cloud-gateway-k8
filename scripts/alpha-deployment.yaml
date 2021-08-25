@@ -1,0 +1,30 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: alpha-service
+spec:
+  selector:
+    app: alpha-service
+  ports:
+  - protocol: TCP
+    port: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alpha-app
+spec:
+  selector:
+      matchLabels:
+        app: alpha-service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: alpha-app
+    spec:
+      containers:
+        - name: alpha-container
+          image: localhost:5000/alpha-service:latest
+          ports:
+          - containerPort: 8080
