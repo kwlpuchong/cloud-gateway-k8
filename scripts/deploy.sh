@@ -12,7 +12,7 @@ docker build -t gateway .
 docker tag gateway localhost:5000/gateway
 docker push localhost:5000/gateway
 
-cd ~/$FOLDER/service-alpha
+cd ~/$FOLDER/alpha-service
 mvn clean install 
 docker build -t alpha-service .
 docker tag alpha-service localhost:5000/alpha-service
