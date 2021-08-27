@@ -4,6 +4,6 @@ spring:
 
 zuul:
   routes:
-    products:
+    alpha:
       path: /alpha
       url: http//alpha
