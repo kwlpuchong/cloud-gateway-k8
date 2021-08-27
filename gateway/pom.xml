@@ -32,8 +32,6 @@
                 <type>pom</type>
                 <scope>import</scope>
 			</dependency>
-		</dependencies>
-		<dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-kubernetes-dependencies</artifactId>
@@ -41,7 +39,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-        </dependencies>
+		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
