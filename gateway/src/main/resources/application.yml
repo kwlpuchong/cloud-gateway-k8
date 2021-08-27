@@ -1,8 +1,9 @@
 spring:
   application:
     name: gateway
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true  
+
+zuul:
+  routes:
+    products:
+      path: /alpha
+      url: http//alpha
