@@ -25,27 +25,28 @@
 
     <dependencyManagement>
 		<dependencies>
-            <dependency>
+            <!--<dependency>
 				<groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-			</dependency>
-            <!--<dependency>
+			</dependency>-->
+            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-kubernetes-dependencies</artifactId>
                 <version>${spring.cloud.k8s.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>-->
+            </dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
+            <version>1.4.7.RELEASE</version>
         </dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
